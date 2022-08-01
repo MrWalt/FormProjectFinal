@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 9.6rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.check-active {
+  background-color: #8cd99a;
+  box-shadow: 0 0 0 4px #20602c;
+}
+
+.form-box-checkbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #0d2611;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  row-gap: 1.2rem;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0d2611;
+  margin-bottom: 1.2rem;
+}
+
+input {
+  background-color: inherit !important;
+  color: #0d2611;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  padding: 0.4rem 1.2rem;
+  transition: all 0.3s;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #0d2611;
+  transform: scale(1.01);
+}
+input::placeholder {
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+  line-height: 0;
+  color: #133a1a;
+  font-family: "Rubik";
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.form-checkbox {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.form-btn,
+.dropdown-btn {
+  display: inline-block;
+  margin-right: 1.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 2px solid #0d2611;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form-btn:hover, .form-btn:active,
+.dropdown-btn:hover,
+.dropdown-btn:active {
+  background-color: #0d2611;
+}
+
+.form-dropdown {
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  background-image: linear-gradient(to bottom, #339a46, #8cd99a);
+  padding: 6.4rem 9.6rem;
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+.form-dropdown .btn-submit {
+  font-family: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  font-size: 2.4rem;
+  border-radius: 50px;
+  background-color: #1a4d23;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.096);
+  color: #fff;
+  padding: 2rem 4.8rem;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form-dropdown .btn-submit:hover {
+  background-color: #98dda4;
+  color: #0d2611;
+}
+
+.important-info {
+  position: relative;
+}
+.important-info::after {
+  content: "*";
+  position: absolute;
+  font-size: 1.6rem;
+  top: -20%;
+  color: inherit;
+}
+
+.heading-secondary {
+  font-size: 4.2rem;
+  font-weight: 600;
+  color: #0d2611;
+  margin-bottom: 1.2rem;
+}
+
+.subheading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  margin-bottom: 4.8rem;
+  opacity: 60%;
+}
+
+.index {
+  z-index: -1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.pop-active {
+  opacity: 100% !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0%) !important;
+}
+
+.section-hero .hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6.4rem;
+  background-image: linear-gradient(to bottom right, #69db7c, #339a46);
+  padding: 0 6.4rem 0 4.8rem;
+  justify-items: center;
+  border-radius: 11px;
+}
+.section-hero .hero-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+.section-hero .hero-text {
+  font-size: 4.8rem;
+  letter-spacing: -1.4px;
+  font-weight: 700;
+  color: #0d2611;
+  margin-top: 4.8rem;
+}
+.section-hero .btn-hero:link,
+.section-hero .btn-hero:visited {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: #0d2611;
+  color: #fff;
+  padding: 1.4rem 2.8rem;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  border-radius: 11px;
+  transition: all 0.3s;
+}
+.section-hero .btn-hero:hover,
+.section-hero .btn-hero:active {
+  background: none;
+  box-shadow: inset 0 0 0 2px #0d2611;
+  color: #0d2611;
+}
+.section-hero .hero-img {
+  width: 100%;
+  border-radius: 9px;
+  transform: scale(1.15);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.07);
+}
+
+.section-form {
+  position: relative;
+  padding-bottom: 9.6rem;
+}
+.section-form .form {
+  padding: 4.8rem 4.8rem;
+  margin-left: 3.2rem;
+}
+.section-form .form-container {
+  background-image: linear-gradient(to bottom left, #3aad4e, #8ce99a);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 11px;
+  align-items: center;
+  transform: translateY(50%);
+  width: 100%;
+  opacity: 0%;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.7s;
+}
+.section-form .form-container .form-img-box {
+  background-image: linear-gradient(rgba(58, 173, 77, 0.103), rgba(26, 209, 53, 0.11)), url("../../../src/assets/coding-2.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.section-form .form-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section-form .form-box:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+.section-form .form-box .invalid-info {
+  color: #660000;
+  font-size: 1.6rem;
+  position: absolute;
+  top: -25%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.section-form .form-box .invalid {
+  opacity: 1;
+}
+
+.form-dropdown-can-code,
+.form-dropdown-cant-code {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: scaleX(0.95) translateY(-95%);
+}
+.form-dropdown-can-code .dropdown-container,
+.form-dropdown-cant-code .dropdown-container {
+  transform: scaleX(1.05) !important;
+}
+.form-dropdown-can-code .dropdown-container input,
+.form-dropdown-cant-code .dropdown-container input {
+  width: 45%;
+}
+
+.active-form {
+  transform: scaleX(0.95) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.section-table .table {
+  background-image: linear-gradient(to left, #53c668, #40c057);
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.6rem 7.2rem;
+  justify-content: center;
+  border-radius: 11px;
+  gap: 3.6rem;
+}
+.section-table .table label {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  opacity: 95%;
+  font-weight: 600;
+}
+.section-table .table div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.section-table .table p {
+  margin-left: 1.2rem;
+  font-size: 2.2rem;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
